@@ -54,9 +54,8 @@ const ThinkDrawer = ({
         className="flex items-center w-full px-3 py-2 text-sm text-gray-600 bg-white rounded-t-lg hover:bg-gray-100"
       >
         <svg
-          className={`w-4 h-4 mr-2 transition-transform ${
-            isOpen ? 'transform rotate-90' : ''
-          }`}
+          className={`w-4 h-4 mr-2 transition-transform ${isOpen ? 'transform rotate-90' : ''
+            }`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -97,17 +96,12 @@ export const Base = () => {
 
   const t = (en: string) => {
     const map: { [key: string]: string } = {
-      'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?':
-        '为带有主动降噪和40小时续航的无线耳机写产品标题',
-      'Generate a professional email template to handle customer complaints about product quality':
-        '生成一个处理产品质量客户投诉的专业邮件模板',
-      'Help optimize Python code for quick sort algorithm with time complexity analysis':
-        '帮助优化快速排序算法的Python代码并分析时间复杂度',
-      'Create a comparison table of marketing strategies between TikTok and Instagram Reels':
-        '创建抖音和Instagram Reels营销策略的对比表',
-      'DeepSeek R1 on the Edge': 'DeepSeek R1 边缘计算',
-      'EdgeOne AI is transforming user experience and operational efficiency by performing AI computations closer to end-users, ensuring ultra-low latency and consistently high performance.':
-        'EdgeOne AI 通过在靠近终端用户的地方执行 AI 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。',
+      'Hi, who are you?':
+        '你好，你是谁？',
+      'What can you do?':
+        '你可以做什么？',
+      'Author: QiuXuan By EdgeOne AI':
+        '作者：QiuXuan 使用 EdgeOne AI 生成',
       'Available for free on ': '免费使用 ',
       'Thinking Process': '思考过程',
       Processing: '处理中',
@@ -124,35 +118,19 @@ export const Base = () => {
   const KEYWORD_BUTTONS: KeywordButton[] = [
     {
       text: t(
-        'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
+        'Hi, who are you?'
       ),
       query: t(
-        'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
+        'Hi, who are you?'
       ),
     },
     {
       text: t(
-        'Generate a professional email template to handle customer complaints about product quality'
+        'What can you do?'
       ),
       query: t(
-        'Generate a professional email template to handle customer complaints about product quality'
-      ),
-    },
-    {
-      text: t(
-        'Help optimize Python code for quick sort algorithm with time complexity analysis'
-      ),
-      query: t(
-        'Help optimize Python code for quick sort algorithm with time complexity analysis'
-      ),
-    },
-    {
-      text: t(
-        'Create a comparison table of marketing strategies between TikTok and Instagram Reels'
-      ),
-      query: t(
-        'Create a comparison table of marketing strategies between TikTok and Instagram Reels'
-      ),
+        'What can you do?'
+      )
     },
   ];
 
@@ -182,7 +160,7 @@ export const Base = () => {
   const onGithubBtnClick = () => {
     if (isSiteEnv) {
       window.open(
-        'https://github.com/TencentEdgeOne/pages-templates/blob/main/examples/deepseek-r1-edge/README_zh-CN.md',
+        'https://github.com/qx-1024/deepseek-r1-edge-demo/blob/main/README_zh-CN.md',
         '_blank'
       );
       return;
@@ -223,7 +201,7 @@ export const Base = () => {
     setUserInput(query);
     setShowKeywords(false);
     setTimeout(() => {
-      handleSubmit({ preventDefault: () => {} } as React.FormEvent);
+      handleSubmit({ preventDefault: () => { } } as React.FormEvent);
     });
   };
 
@@ -478,22 +456,12 @@ export const Base = () => {
       <div className="flex items-center justify-center min-h-[50vh]">
         <div className="max-w-3xl px-4 mx-auto text-center">
           <h2 className="mb-2 text-2xl font-semibold text-gray-800">
-            {t('DeepSeek R1 on the Edge')}
+            {t('QiuXuan AI')}
           </h2>
           <p className="text-gray-600">
             {t(
-              'EdgeOne AI is transforming user experience and operational efficiency by performing AI computations closer to end-users, ensuring ultra-low latency and consistently high performance.'
+              '作者：QiuXuan 使用 EdgeOne AI 生成'
             )}
-          </p>
-
-          <p className="mt-2 text-sm text-gray-500">
-            {t('Available for free on ')}{' '}
-            <button
-              onClick={onEdgeOneAIBtnClick}
-              className="mt-4 text-blue-600 hover:text-blue-800 hover:underline focus:outline-none"
-            >
-              EdgeOne Pages
-            </button>
           </p>
         </div>
       </div>
@@ -560,9 +528,8 @@ export const Base = () => {
           className="flex items-center w-full px-3 py-2 text-sm text-gray-600 bg-white rounded-t-lg hover:bg-gray-100"
         >
           <svg
-            className={`w-4 h-4 mr-2 transition-transform ${
-              isOpen ? 'transform rotate-90' : ''
-            }`}
+            className={`w-4 h-4 mr-2 transition-transform ${isOpen ? 'transform rotate-90' : ''
+              }`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -599,15 +566,8 @@ export const Base = () => {
       <div className="flex flex-col h-screen bg-white">
         {/* Header */}
         <header className="sticky top-0 z-50 flex items-center px-6 py-3 bg-white">
-          <h1 className="text-base font-semibold text-gray-800">EdgeOne AI</h1>
+          <h1 className="text-base font-semibold text-gray-800">QiuXuan AI</h1>
           <div className="flex-grow" />
-          <a onClick={onDeployBtnClick} className="mr-4 cursor-pointer">
-            <img
-              src="https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg"
-              alt="Deploy to EdgeOne Pages"
-              className="h-7"
-            />
-          </a>
           <a
             onClick={onGithubBtnClick}
             target="_blank"
@@ -630,16 +590,14 @@ export const Base = () => {
             {messages.map((message, index) => (
               <div
                 key={index}
-                className={`flex items-start ${
-                  message.role === 'user' ? 'justify-end' : 'justify-start'
-                }`}
+                className={`flex items-start ${message.role === 'user' ? 'justify-end' : 'justify-start'
+                  }`}
               >
                 <div
-                  className={`relative max-w-[100%] px-4 py-3 rounded-md ${
-                    message.role === 'user'
+                  className={`relative max-w-[100%] px-4 py-3 rounded-md ${message.role === 'user'
                       ? 'bg-gray-200 text-black'
                       : 'bg-white text-gray-800'
-                  }`}
+                    }`}
                 >
                   {message.role === 'user' && (
                     <p className="whitespace-pre-wrap">{message.content}</p>
@@ -730,9 +688,8 @@ export const Base = () => {
                 onChange={handleTextareaChange}
                 placeholder={t('Type a message...')}
                 disabled={isLoading}
-                className={`w-full bg-white text-gray-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/50 resize-none min-h-[52px] max-h-[200px] placeholder:text-gray-400 border-none ${
-                  isLoading ? 'cursor-not-allowed opacity-50' : ''
-                }`}
+                className={`w-full bg-white text-gray-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/50 resize-none min-h-[52px] max-h-[200px] placeholder:text-gray-400 border-none ${isLoading ? 'cursor-not-allowed opacity-50' : ''
+                  }`}
                 onCompositionStart={(e) => {
                   (e.target as HTMLTextAreaElement).dataset.composing = 'true';
                 }}
@@ -752,11 +709,10 @@ export const Base = () => {
                 <button
                   type="button"
                   onClick={() => setUseNetwork(!useNetwork)}
-                  className={`flex items-center px-2 py-1.5 rounded-lg text-sm ${
-                    useNetwork
+                  className={`flex items-center px-2 py-1.5 rounded-lg text-sm ${useNetwork
                       ? 'bg-blue-50 text-blue-600'
                       : 'bg-gray-100 text-gray-600'
-                  }`}
+                    }`}
                 >
                   <svg
                     className="w-4 h-4 mr-1"
@@ -774,14 +730,13 @@ export const Base = () => {
                     (isLoading && !isStreaming) ||
                     (!userInput.trim() && !isStreaming)
                   }
-                  className={`flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 ${
-                    (isLoading && !isStreaming) ||
-                    (!userInput.trim() && !isStreaming)
+                  className={`flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 ${(isLoading && !isStreaming) ||
+                      (!userInput.trim() && !isStreaming)
                       ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                       : isStreaming
-                      ? 'bg-red-500 text-white hover:bg-red-600 hover:shadow-md active:transform active:scale-95'
-                      : 'bg-blue-500 text-white hover:bg-blue-600 hover:shadow-md active:transform active:scale-95'
-                  }`}
+                        ? 'bg-red-500 text-white hover:bg-red-600 hover:shadow-md active:transform active:scale-95'
+                        : 'bg-blue-500 text-white hover:bg-blue-600 hover:shadow-md active:transform active:scale-95'
+                    }`}
                 >
                   {isStreaming ? (
                     <svg
