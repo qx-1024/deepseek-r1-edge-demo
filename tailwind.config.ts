@@ -102,6 +102,10 @@ const config: Config = {
           },
         },
       },
+      borderColor: {
+        DEFAULT: 'hsl(var(--border))',
+        border: 'hsl(var(--border))',
+      }
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
